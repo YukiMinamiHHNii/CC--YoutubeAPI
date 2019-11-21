@@ -33,6 +33,7 @@ exports.getVideoInfo = (req, res) => {
 				q: query.hasOwnProperty("term") ? `${query.term}` : "",
 				maxResults: query.hasOwnProperty("maxResults") ? query.maxResults : 12,
 				pageToken: query.hasOwnProperty("page") ? query.page : "",
+				order: "date",
 				fields:
 					"pageInfo,prevPageToken,nextPageToken,items(id(videoId),snippet(title,description,thumbnails(medium)))"
 			}
