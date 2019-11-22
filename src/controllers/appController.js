@@ -30,9 +30,16 @@ exports.getVideoInfo = (req, res) => {
 				key: `${process.env.YOUTUBE_KEY}`,
 				part: "snippet",
 				type: "video",
-				q: query.term !== null ? `${query.term}` : "",
-				maxResults: query.maxResults !== null ? query.maxResults : 12,
-				pageToken: query.page !== null ? query.page : "",
+				q:
+					query.hasOwnProperty("term") && query.term !== null
+						? `${query.term}`
+						: "",
+				maxResults:
+					query.hasOwnProperty("maxResults") && query.maxResults !== null
+						? query.maxResults
+						: 12,
+				pageToken:
+					query.hasOwnProperty("page") && query.page !== null ? query.page : "",
 				order: "date",
 				fields:
 					"pageInfo,prevPageToken,nextPageToken,items(id(videoId),snippet(title,description,thumbnails(medium)))"
