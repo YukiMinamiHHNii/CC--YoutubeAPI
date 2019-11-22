@@ -7,7 +7,7 @@ Node.js API for Youtube API consumption as required by Cultura Colectiva recruit
 	- SERVER_PORT: Port number in which the api will be accessible
 	- YOUTUBE_ENDPOINT: Youtube API endpoint URL (https://www.googleapis.com/youtube/v3)
 	- YOUTUBE_KEY: Youtube API key 
-	- CHANNEL_ID: Youtube channel from which the info will be extracted key
+	- CHANNEL_ID: Youtube channel from which the info will be extracted key (example: UCV0qA-eDDICsRR9rPcnG7tw) 
 
 - Install project dependencies (*npm install*) and then run it either by using *npm start* command or Docker.
 
